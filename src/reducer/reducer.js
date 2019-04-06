@@ -4,14 +4,8 @@ let initialState = {
     fetched:false,
     error:null,
     count: 0,
-    users: {
-        user1: 'user1',
-        user2: 'user2'
-    },
-    data: {
-        data1: 'data1',
-        data2: 'data2'
-    }
+    users: [],
+    
 }
 
 const  reducer = (state = initialState, action) => {
@@ -21,7 +15,7 @@ const  reducer = (state = initialState, action) => {
        // case 'FETCH_USERS': return { ...state }
         case 'FETCH_USERS_PENDING': return { ...state,fetching:true }
         case 'FETCH_USERS_REJECTED': return { ...state,fetching:false,error:action.payload.error }
-        case 'FETCH_USERS_FULFILLED': return { ...state,users:action.payload.users, fetching:false,fetched:true }
+        case 'FETCH_USERS_FULFILLED': return { ...state,users:action.payload.data, fetching:false,fetched:true }
         default:
             return state;
     }

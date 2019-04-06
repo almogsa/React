@@ -1,4 +1,4 @@
-
+import axios from 'axios'
 export function addUser(user) {
     return {
         type: 'ADD_USER',
@@ -19,9 +19,12 @@ export function updateUser(user) {
 }
 
 ///////// Asynchronic actions
-
+// using promis middleware , it automatically dispatch FETCH_USERS_PENDING, FETCH_USERS_REJECTED,FETCH_USERS_FULFILLED
 export function fetchUsers(){
-    return 
+    return {
+        type:'FETCH_USERS',
+        payload: axios.get('http://almog.herokuapp.com/api/players')
+    } 
 }
 
 
