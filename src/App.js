@@ -4,8 +4,8 @@ import axios from 'axios'
 import './App.css';
 import {utils} from './utils';
 import Players from './components/Players'
-import {fetchUsers} from './actions/userActions'
-import store from './store/store'
+//import {fetchUsers} from './actions/userActions'
+//import store from './store/store'
 
 class App extends Component {
  
@@ -16,7 +16,7 @@ class App extends Component {
     //     type:'FETCH_USERS',
     //     payload: axios.get('http://almog.herokuapp.com/api/players')
     //   })
-    store.dispatch(fetchUsers());
+  //  store.dispatch(fetchUsers());
 
   }
   

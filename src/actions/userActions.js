@@ -17,6 +17,11 @@ export function updateUser(user) {
              payload:  user  
             }
 }
+export function updateUserArrive(userId) {
+    return { type: 'UPDATE_USER_ARRIVE',
+             payload:  userId  
+            }
+}
 
 ///////// Asynchronic actions
 // using promis middleware , it automatically dispatch FETCH_USERS_PENDING, FETCH_USERS_REJECTED,FETCH_USERS_FULFILLED
